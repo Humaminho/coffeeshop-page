@@ -1,0 +1,140 @@
+:root {
+  --pink: rgb(223,102,93);
+  --white: white;
+  --cassé: rgb(217, 217, 217);
+  --grey: rgb(124, 124, 124);
+  --black: rgb(12, 12, 12);
+  --dark-grey: rgb(54, 54, 54);
+  --fd-height: 4.1rem;
+  --coffee: rgb(79, 46, 11);
+}
+::selection {
+  color: white;
+  background: var(--coffee);
+}
+
+@font-face {
+  font-family: Heavy;
+  src: url(./components/my_components/fonts/Uni\ Sans\ Heavy.otf);
+}
+@font-face {
+  font-family: Stililo;
+  src: url(./components/my_components/fonts/Cinzel-Regular.otf);
+}
+@font-face {
+  font-family: Adam;
+  src: url(./components/my_components/fonts/ADAM.CG\ PRO.otf);
+}
+
+
+* {
+  padding: 0;
+  margin: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+#content {
+  min-height: 100%;
+  background-color: rgb(27,30,32);
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: var(--coffee);
+  height: var(--fd-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3rem;
+  font-family: Roboto, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+header > a {
+  color: var(--white);
+  font-family: Heavy, Geneva, Verdana, sans-serif;
+  font-size: 1.4rem;
+}
+
+ul {
+  display: flex;
+  gap: 1.6rem;
+  align-items: center;
+}
+li {
+  list-style: none;
+}
+li > a {
+  font-family: Adam, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
+  font-size: 1rem;
+}
+main {
+  flex-grow: 1;
+  background-image: url(../src/components/my_components/imgs/espresso.jpg);
+  background-size:cover;
+  background-position-y: 50%;
+  
+  display: flex;
+  align-items: center;
+  padding: 0 3rem;
+}
+section > h2 {
+  font-family: Heavy, Roboto, sans-serif;
+  font-size: 5rem;
+}
+section > p {
+  font-family: Stililo, Times, serif;
+}
+
+.contact-icons {
+  display: flex;
+  gap: 1.5rem;
+
+  position: relative;
+  top: 8rem;
+}
+.contact-icons > a {
+  background-color: transparent;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact-icons > a:hover {
+  background-color: black;
+}
+
+svg {
+  color: white;
+  padding: 5px;
+}
+
+footer {
+  height: var(--fd-height);
+  background-color: var(--coffee);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer > p {
+  color: var(--white);
+  font-family: Stililo, Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+}
