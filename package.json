@@ -1,0 +1,27 @@
+{
+  "name": "restaurant-page",
+  "version": "1.0.0",
+  "description": "Mamma Mia",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "start": "webpack serve --open",
+    "watch": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Humaminho/restaurant-page.git"
+  },
+  "author": "Humam Kharbouch",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Humaminho/restaurant-page/issues"
+  },
+  "homepage": "https://github.com/Humaminho/restaurant-page#readme",
+  "devDependencies": {
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.11.1"
+  }
+}
