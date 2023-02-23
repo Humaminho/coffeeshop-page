@@ -85,6 +85,8 @@ li > a {
 }
 main {
   flex-grow: 1;
+}
+.home {
   background-image: url(../src/components/my_components/imgs/espresso.jpg);
   background-size:cover;
   background-position-y: 50%;
@@ -124,6 +126,37 @@ section > p {
 svg {
   color: white;
   padding: 5px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.description {
+  align-self: flex-end;
+  margin-right: 5rem;
+}
+#menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  padding: 5rem;
+}
+.drink {
+  display: flex;
+  flex-direction: column;
+}
+.drinks {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: 10rem 3rem;
+}
+.drink-names {
+  justify-self: start;
+}
+.prices {
+  justify-self: end;
 }
 
 footer {
