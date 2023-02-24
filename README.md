@@ -1,3 +1,3 @@
-# restaurant-page
+# Coffee Shop Page
 
 Argana's Official Website
