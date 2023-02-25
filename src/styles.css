@@ -5,9 +5,9 @@
   --grey: rgb(124, 124, 124);
   --black: rgb(12, 12, 12);
   --dark-grey: rgb(54, 54, 54);
-  --fd-height: 4.1rem;
-  --coffee: rgb(79, 46, 11);
-  --transparent: rgba(0, 0, 0, 0.641);
+  --fd-height: 3.5rem;
+  --coffee: rgba(141, 83, 21, 0.905);
+  --transparent: rgba(0, 0, 0, 0.532);
 }
 ::selection {
   color: white;
@@ -31,6 +31,7 @@
   padding: 0;
   margin: 0;
   transition: all 0.2s ease-in-out;
+  box-sizing: border-box;
 }
 
 html {
@@ -54,6 +55,11 @@ body {
   background-size: cover;
   background-position-y: center;
 }
+.home-background {
+  background-image: url(../src/components/my_components/imgs/espresso.jpg);
+  background-size:cover;
+  background-position-y: 50%;
+}
 header {
   background-color: var(--transparent);
   height: var(--fd-height);
@@ -63,9 +69,19 @@ header {
   padding: 0 3rem;
   font-family: Roboto, sans-serif;
 }
-
 a {
   text-decoration: none;
+  cursor: pointer;
+}
+#logo {
+  cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  align-items: flex-end;
+  gap: .2rem;
+}
+#logo:hover {
+  text-decoration: underline;
 }
 
 header > a {
@@ -73,29 +89,35 @@ header > a {
   font-family: Heavy, Geneva, Verdana, sans-serif;
   font-size: 1.4rem;
 }
-
-ul {
+.header-nav {
+  height: 100%;
+}
+.header-ul {
   display: flex;
-  gap: 1.6rem;
   align-items: center;
+  height: 100%;
 }
-li {
+.header-nav-list {
   list-style: none;
+  height: 100%;
 }
-li > a {
+.header-nav-link {
+  display: block;
   font-family: Adam, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: white;
   font-size: 1rem;
+  height: 100%;
+  padding: 1.3rem;
+}
+.header-nav-link:hover {
+  background-color: rgb(255, 255, 255, 0.9);
+  color: var(--black);
 }
 main {
   flex-grow: 1;
   min-width: 650px;
 }
 .home {
-  background-image: url(../src/components/my_components/imgs/espresso.jpg);
-  background-size:cover;
-  background-position-y: 50%;
-  
   display: flex;
   align-items: center;
   padding: 0 3rem;
@@ -103,6 +125,9 @@ main {
 section > h2 {
   font-family: Heavy, Roboto, sans-serif;
   font-size: 5rem;
+}
+#coffee-color {
+  color: var(--coffee);
 }
 section > p {
   font-family: Stililo, Times, serif;
