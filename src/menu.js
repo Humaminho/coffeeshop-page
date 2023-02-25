@@ -2,19 +2,21 @@ export default function menu() {
   const content = document.getElementById('content');
   content.innerHTML = '';
   content.innerHTML = `<header>
-      <a href="index.html">
-        ARGANTINA.</a>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="menu.html">Menu</a></li>
-          <li><a href="contact.html">Contact us</a></li>
+      <a id="logo">
+        <img src="coffee-beans.png" alt="Home" width="30px" height="30px">
+        <span>ARGANTINA.</span>
+      </a>
+      <nav class="header-nav">
+        <ul class="header-ul">
+          <li class="header-nav-list"><a id="home" class="header-nav-link">Home</a></li>
+          <li class="header-nav-list"><a id="menu"class="header-nav-link">Menu</a></li>
+          <li class="header-nav-list"><a id="about" class="header-nav-link">About</a></li>
         </ul>
       </nav>
     </header>
 
     <main class="menu">
-      <p>
+      <p id="chill-color">
         MENU
       </p>
       <img src="barista.jpg" alt="Café" height="220px">
@@ -28,7 +30,7 @@ export default function menu() {
 
       <div id="our-menu">
         <section class="drink">
-          <div class="title">ESPRESSO</div>
+          <div class="title" id="chill-color">ESPRESSO</div>
           <div class="drinks">
             <div class="drink-names">
               Normal<br>Talian<br>Nss Nss<br>Special<br>Americano<br>Cappuccino<br>Macchiato<br>Chocolate milk
@@ -39,7 +41,7 @@ export default function menu() {
           </div>
         </section>
         <section class="drink">
-          <div class="title">ICE BLENDED</div>
+          <div class="title" id="chill-color">ICE BLENDED</div>
           <div class="drinks">
             <div class="drink-names">
               Caramel<br>Coffee Jelly<br>Cookies and Cream<br>Hazelnut Mocha<br>Matcha Cream<br>Mint Chocolate<br>Strawberry Cream<br>Vanilla Bean
@@ -50,7 +52,7 @@ export default function menu() {
           </div>
         </section>
         <section class="drink">
-          <div class="title">TEA</div>
+          <div class="title" id="chill-color">TEA</div>
           <div class="drinks">
             <div class="drink-names">
               Mint Flavored Tea<br>Green Tea<br>Northern Tea<br>Herbal Tea
@@ -61,7 +63,7 @@ export default function menu() {
           </div>
         </section>
         <section class="drink">
-          <div class="title">BAKERY</div>
+          <div class="title" id="chill-color">BAKERY</div>
           <div class="drinks">
             <div class="drink-names">
               Pastries<br>Bagels<br>Muffins<br>Biscotto
@@ -77,7 +79,7 @@ export default function menu() {
       <p>created by Humaminho</p>
     </footer>`;
 
-  content.classList.remove('home');
-  content.classList.remove('about');
-  content.classList.add('menu');
+  content.classList.remove('home-background');
+  content.classList.remove('about-background');
+  content.classList.add('menu-background');
 }

@@ -7,7 +7,7 @@
   --dark-grey: rgb(54, 54, 54);
   --fd-height: 3.5rem;
   --coffee: rgba(141, 83, 21, 0.905);
-  --transparent: rgba(0, 0, 0, 0.532);
+  --transparent: rgba(0, 0, 0, 0.9);
 }
 ::selection {
   color: white;
@@ -30,7 +30,7 @@
 * {
   padding: 0;
   margin: 0;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in;
   box-sizing: border-box;
 }
 
@@ -57,6 +57,11 @@ body {
 }
 .home-background {
   background-image: url(../src/components/my_components/imgs/espresso.jpg);
+  background-size:cover;
+  background-position-y: 50%;
+}
+.about-background {
+  background-image: url(../src/components/my_components/imgs/cafe.jpg);
   background-size:cover;
   background-position-y: 50%;
 }
@@ -126,8 +131,11 @@ section > h2 {
   font-family: Heavy, Roboto, sans-serif;
   font-size: 5rem;
 }
+#chill-color {
+  color: rgb(219, 176, 119);
+}
 #coffee-color {
-  color: var(--coffee);
+  color: rgb(209, 154, 82);
 }
 section > p {
   font-family: Stililo, Times, serif;
@@ -221,6 +229,62 @@ svg {
 }
 .prices {
   justify-self: end;
+}
+.about {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.927);
+  margin: 3rem 20rem;
+  padding: 3rem 0;
+  border-radius: 10px;
+}
+#illustration1 {
+  position: absolute;
+  height: 10rem;
+  right: 2rem;
+  top: -1rem;
+}
+#illustration2 {
+  position: absolute;
+  height: 10rem;
+  bottom: 4rem;
+  left: -4rem;
+}
+.about > p {
+  font-family: Heavy, Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 5rem;
+  color: white;
+  z-index: 69;
+  margin-top: 1rem;
+}
+#chill-color.contact-us {
+  font-size: 4rem;
+  margin-top: 4rem;
+}
+.about-section {
+  font-family: Adam, Verdana, Geneva, Tahoma, sans-serif;
+  padding: 0 3.8rem;
+  line-height: 1.2rem;
+  text-indent: 1rem;
+}
+.about-section > span {
+  color: var(--coffee);
+}
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  font-family: Adam, Verdana, Geneva, Tahoma, sans-serif;
+}
+.contact-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.contact-section > svg:hover {
+  color: var(--coffee);
 }
 
 footer {
