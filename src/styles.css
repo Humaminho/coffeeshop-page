@@ -5,9 +5,9 @@
   --grey: rgb(124, 124, 124);
   --black: rgb(12, 12, 12);
   --dark-grey: rgb(54, 54, 54);
-  --fd-height: 4.1rem;
-  --coffee: rgb(79, 46, 11);
-  --transparent: rgb(0, 0, 0, 0.8);
+  --fd-height: 3.5rem;
+  --coffee: rgba(141, 83, 21, 0.905);
+  --transparent: rgba(0, 0, 0, 0.9);
 }
 ::selection {
   color: white;
@@ -30,7 +30,8 @@
 * {
   padding: 0;
   margin: 0;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in;
+  box-sizing: border-box;
 }
 
 html {
@@ -52,7 +53,17 @@ body {
 .menu-background {
   background-image: url(components/my_components/imgs/coffee-cups.jpg);
   background-size: cover;
-  background-position-y: -200px;
+  background-position-y: center;
+}
+.home-background {
+  background-image: url(../src/components/my_components/imgs/espresso.jpg);
+  background-size:cover;
+  background-position-y: 50%;
+}
+.about-background {
+  background-image: url(../src/components/my_components/imgs/cafe.jpg);
+  background-size:cover;
+  background-position-y: 50%;
 }
 header {
   background-color: var(--transparent);
@@ -63,9 +74,19 @@ header {
   padding: 0 3rem;
   font-family: Roboto, sans-serif;
 }
-
 a {
   text-decoration: none;
+  cursor: pointer;
+}
+#logo {
+  cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  align-items: flex-end;
+  gap: .2rem;
+}
+#logo:hover {
+  text-decoration: underline;
 }
 
 header > a {
@@ -73,29 +94,35 @@ header > a {
   font-family: Heavy, Geneva, Verdana, sans-serif;
   font-size: 1.4rem;
 }
-
-ul {
+.header-nav {
+  height: 100%;
+}
+.header-ul {
   display: flex;
-  gap: 1.6rem;
   align-items: center;
+  height: 100%;
 }
-li {
+.header-nav-list {
   list-style: none;
+  height: 100%;
 }
-li > a {
+.header-nav-link {
+  display: block;
   font-family: Adam, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: white;
   font-size: 1rem;
+  height: 100%;
+  padding: 1.3rem;
+}
+.header-nav-link:hover {
+  background-color: rgb(255, 255, 255, 0.9);
+  color: var(--black);
 }
 main {
   flex-grow: 1;
   min-width: 650px;
 }
 .home {
-  background-image: url(../src/components/my_components/imgs/espresso.jpg);
-  background-size:cover;
-  background-position-y: 50%;
-  
   display: flex;
   align-items: center;
   padding: 0 3rem;
@@ -103,6 +130,12 @@ main {
 section > h2 {
   font-family: Heavy, Roboto, sans-serif;
   font-size: 5rem;
+}
+#chill-color {
+  color: rgb(219, 176, 119);
+}
+#coffee-color {
+  color: rgb(209, 154, 82);
 }
 section > p {
   font-family: Stililo, Times, serif;
@@ -137,11 +170,12 @@ svg {
   position: relative;
   display: flex;
   flex-direction: column;
+  gap: 2rem;
   align-items: center;
-  background-color: rgb(0, 0, 0, 0.9);
-  margin: 0 20rem;
-  margin-top: 3rem;
+  background-color: rgba(0, 0, 0, 0.927);
+  margin: 3rem 20rem;
   padding-top: 2rem;
+  border-radius: 10px;
 }
 .menu > p {
   position: static;
@@ -149,40 +183,108 @@ svg {
   font-size: 5rem;
   color: white;
   z-index: 69;
+  line-height: 60px;
+  margin-top: 1rem;
 }
 .menu > img {
   position: absolute;
-  top: 3rem;
-  right: 43%;
+  top: 3.8rem;
+  right: 46%;
   border-radius: 10px;
   z-index: 0;
 }
 .description {
   align-self: flex-end;
-  margin-right: 5rem;
+  margin-right: 10rem;
   font-family: Heavy, Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.1rem;
   z-index: 200;
 }
-#menu {
+#our-menu {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   z-index: 69;
+  gap: 4rem;
 }
 .drink {
   display: flex;
   flex-direction: column;
 }
+.title {
+  font-family: Heavy, Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: .5rem;
+}
 .drinks {
   flex-grow: 1;
   display: grid;
   grid-template-columns: 10rem 3rem;
+  font-family: Adam,Geneva, Tahoma, sans-serif;
+  font-size: .9rem;
+  line-height: 130%;
 }
 .drink-names {
   justify-self: start;
 }
 .prices {
   justify-self: end;
+}
+.about {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.927);
+  margin: 3rem 20rem;
+  padding: 3rem 0;
+  border-radius: 10px;
+}
+#illustration1 {
+  position: absolute;
+  height: 10rem;
+  right: 2rem;
+  top: -1rem;
+}
+#illustration2 {
+  position: absolute;
+  height: 10rem;
+  bottom: 4rem;
+  left: -4rem;
+}
+.about > p {
+  font-family: Heavy, Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 5rem;
+  color: white;
+  z-index: 69;
+  margin-top: 1rem;
+}
+#chill-color.contact-us {
+  font-size: 4rem;
+  margin-top: 4rem;
+}
+.about-section {
+  font-family: Adam, Verdana, Geneva, Tahoma, sans-serif;
+  padding: 0 3.8rem;
+  line-height: 1.2rem;
+  text-indent: 1rem;
+}
+.about-section > span {
+  color: var(--coffee);
+}
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  font-family: Adam, Verdana, Geneva, Tahoma, sans-serif;
+}
+.contact-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.contact-section > svg:hover {
+  color: var(--coffee);
 }
 
 footer {
