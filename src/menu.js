@@ -19,14 +19,6 @@ export default function menu() {
       <p id="chill-color">
         MENU
       </p>
-      <img src="barista.jpg" alt="Café" height="220px">
-      <div class="description">
-        <p>GREAT
-        </p>
-        <p class="emphasis">COFFEE</p>
-        <p>SERVED</p>
-        <p>EVERYDAY</p>
-      </div>
 
       <div id="our-menu">
         <section class="drink">

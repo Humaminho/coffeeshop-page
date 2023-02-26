@@ -50,20 +50,20 @@ body {
   display: flex;
   flex-direction: column;
 }
-.menu-background {
-  background-image: url(components/my_components/imgs/coffee-cups.jpg);
-  background-size: cover;
-  background-position-y: center;
-}
 .home-background {
   background-image: url(../src/components/my_components/imgs/espresso.jpg);
   background-size:cover;
-  background-position-y: 50%;
+  background-position-y: center;
+}
+.menu-background {
+  background-image: url(../src/components/my_components/imgs/barista.jpg);
+  background-size: cover;
+  background-position-y: center;
 }
 .about-background {
-  background-image: url(../src/components/my_components/imgs/cafe.jpg);
-  background-size:cover;
-  background-position-y: 50%;
+  background-image: url(../src/components/my_components/imgs/book.jpg);
+  background-size: cover;
+  background-position-y: center;
 }
 header {
   background-color: var(--transparent);
@@ -174,7 +174,7 @@ svg {
   align-items: center;
   background-color: rgba(0, 0, 0, 0.927);
   margin: 3rem 20rem;
-  padding-top: 2rem;
+  padding: 3rem;
   border-radius: 10px;
 }
 .menu > p {
@@ -184,7 +184,7 @@ svg {
   color: white;
   z-index: 69;
   line-height: 60px;
-  margin-top: 1rem;
+  margin: 1rem 0;
 }
 .menu > img {
   position: absolute;
@@ -238,27 +238,27 @@ svg {
   align-items: center;
   background-color: rgba(0, 0, 0, 0.927);
   margin: 3rem 20rem;
-  padding: 3rem 0;
+  padding: 3rem;
   border-radius: 10px;
 }
 #illustration1 {
   position: absolute;
   height: 10rem;
-  right: 2rem;
+  right: -1rem;
   top: -1rem;
 }
 #illustration2 {
   position: absolute;
   height: 10rem;
   bottom: 4rem;
-  left: -4rem;
+  left: -6rem;
 }
 .about > p {
   font-family: Heavy, Verdana, Geneva, Tahoma, sans-serif;
   font-size: 5rem;
   color: white;
   z-index: 69;
-  margin-top: 1rem;
+  margin: 1rem;
 }
 #chill-color.contact-us {
   font-size: 4rem;
@@ -266,7 +266,6 @@ svg {
 }
 .about-section {
   font-family: Adam, Verdana, Geneva, Tahoma, sans-serif;
-  padding: 0 3.8rem;
   line-height: 1.2rem;
   text-indent: 1rem;
 }
@@ -283,10 +282,6 @@ svg {
   align-items: center;
   gap: 1rem;
 }
-.contact-section > svg:hover {
-  color: var(--coffee);
-}
-
 footer {
   height: var(--fd-height);
   background-color: var(--transparent);
